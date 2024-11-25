@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://press.com.mx/wp-content/uploads/2021/12/IPN.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: rgba(86, 85, 85, 0.9);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            background: white;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .instructions {
+            background: white;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .step {
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+        }
+
+        .gradient-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #004e5a, #065d57);
+            border-radius: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gradient-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .gradient-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Instrucciones y reglamento </h1>
+        <div class="instructions">
+            <div class="step">
+                1. Primero, asegúrate de tener todos los materiales necesarios para comenzar el proyecto.
+            </div>
+            <div class="step">
+                2. Prepara tu espacio de trabajo, asegurándote de tener una buena iluminación y ventilación.
+            </div>
+            <div class="step">
+                3. Sigue cada paso cuidadosamente, sin saltarte ninguna instrucción importante.
+            </div>
+            <div class="step">
+                4. Si tienes dudas en algún punto, consulta la documentación o pide ayuda a un experto.
+            </div>
+            <div class="step">
+                5. Al finalizar, revisa que todo esté funcionando correctamente antes de continuar.
+            </div>
+        </div>
+        <a href="./Juego/juego.html" class="gradient-button">!Estoy listo¡</a>
+    </div>
+</body>
+</html>

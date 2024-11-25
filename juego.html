@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Trivia</title>
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-screen">
+            <h1>La Independencia de México</h1>
+            <input type="text" id="player-name" placeholder="Ingresa tu nombre">
+            <button onclick="startGame()">Empezar</button>
+        </div>
+
+        <div id="game-screen">
+            <div class="stats">
+                <div class="lives">Vidas: <span id="lives">4</span></div>
+                <div class="score">Puntos: <span id="score">0</span></div>
+                <div class="timer">Tiempo total: <span id="timer">5:00</span></div>
+            </div>
+            <div class="question-container">
+                <h2 id="question"></h2>
+                <div class="question-timer">Tiempo pregunta: <span id="question-time">15</span>s</div>
+                <div class="options" id="options"></div>
+            </div>
+        </div>
+
+        <div id="results-screen">
+            <h2>¡Juego Terminado!</h2>
+            <div id="final-stats"></div>
+            <div class="wrong-answers" id="wrong-answers"></div>
+            <button onclick="restartGame()">Jugar de nuevo</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="creators">
+                <h3>Creadores:</h3>
+                <p>Salinas Miranda Bruno Azael</p>
+                <p>Hernández Cortes Luis David</p>
+                <p>Lopez Hernández Alexander Gabriel</p>
+                <p>Rodriguez Herrera Ángel Zuriel</p>
+            </div>
+            <div class="group">
+                <h3>Grupo:</h3>
+                <p>1IM16 1°semestre, 2025</p>
+                <p>Historia contemporánea de México</p>
+                <p>Hecho por Alumnos del Instituto Polítecnico Nacional </p>
+            </div>
+        </div>
+    </footer>
+    <script src="./juego.js"></script>
+</body>
+</html>
