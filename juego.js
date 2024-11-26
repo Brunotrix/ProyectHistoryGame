@@ -244,11 +244,12 @@
                 if (consecutiveCorrect === 5) {
                     lives++;
                     consecutiveCorrect = 0;
-                    alert('¡Ganaste una vida extra!');
+                    window.alert('¡Ganaste una vida extra! 🥳');
                 }
             } else {
                 lives -= 0.5;
                 consecutiveCorrect = 0;
+                window.alert('¡Perdiste media vida 🥺')
                 wrongAnswers.push({
                     question: question.question,
                     correctAnswer: question.options[question.correct],
@@ -261,7 +262,7 @@
 
             if (lives <= 0) {
                 endGame();
-                return;
+                return window.alert ("Perdiste, vuelve a intentarlo 🥺 ")
             }
 
             currentQuestion++;
@@ -274,6 +275,7 @@
 
             document.getElementById('game-screen').style.display = 'none';
             document.getElementById('results-screen').style.display = 'block';
+
 
             const timeSpent = 300 - timeLeft;
             const minutes = Math.floor(timeSpent / 60);
