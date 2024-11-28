@@ -1,225 +1,207 @@
         // Preguntas y respuestas
         const questions = [
             {
-                question: "¿Cuál fue una causa económica clave que propició la independencia de México?",
+                question: "¿Por qué la Nueva España era la prisión de los monarcas españoles?",
 
-                options: ["La creación de una industria textil autónoma", "El monopolio industrial que prohibía producir ciertos artículos ", "La libertad de comercio entre España y las colonias.", " La reducción de impuestos sobre la producción local."],
+                options: [" porque carecía de toda legalidad, .", "porque vivían los criollos", "Por ser libres soberano.", " Por ser libres y soberanos"],
+                correct: 0,
+                explanation: "La Nueva España era vista como una prisión porque las decisiones tomadas en ella carecían de legalidad para los monarcas españoles, especialmente durante los conflictos internos y externos que afectaron la legitimidad del trono en Europa."
+            },
+            {
+                question: "¿Quién encabeza el movimiento de separación del gobierno de la Nueva España?",
+                options: ["Miguel Hidalgo", "Francisco Primo de Verdad y Juan Francisco de Azcárate", "Ignacio Zaragoza", "Melchor de Talamantes."],
                 correct: 1,
-                explanation: "El monopolio industrial impedía la producción de ciertos artículos en la Nueva España, como la seda, para favorecer las manufacturas españolas. Esto limitaba el desarrollo económico de la colonia y generó descontento entre los criollos."
+                explanation: "El 16 de septiembre de 1810, Miguel Hidalgo dio el famoso Grito de Dolores, que llamó al pueblo a levantarse contra el dominio español, dando inicio formal al movimiento de independencia (página 131)."
             },
             {
-                question: "¿Qué tipo de causa es el descontento social debido a la discriminación racial hacia indígenas, negros y mestizos?",
-                options: ["Económica", "Política", "Social", "Externa"],
+                question: "¿En qué año se dio la conspiración de Valladolid?",
+                options: ["1811.", "1810", "1808.", "1809"],
                 correct: 2,
-                explanation: "La discriminación racial y la explotación de grupos indígenas, negros y mestizos reflejan las desigualdades sociales presentes en la Nueva España, lo que incentivó el apoyo a la independencia."
+                explanation: "La conspiración de Valladolid, que ocurrió en 1809, fue un intento organizado por los criollos para establecer un gobierno autónomo mientras se proclamaba fidelidad al rey Fernando VII. Fue un precursor importante de los movimientos de independencia."
             },
             {
-                question: "¿Dónde se dio el Grito de Independencia?",
-                options: ["Ciudad de México", "Guanajuato", "Dolores", "Querétaro"],
+                question: "¿Qué buscaba la conspiración de Valladolid?",
+                options: ["La recuperación de Guadalajara", " La esclavitud para siempre", " La destitución del virrey Iturrigaray", "Proponer una nueva monarquía."],
                 correct: 2,
-                explanation: "El Grito de Independencia se dio en el pueblo de Dolores (hoy Dolores Hidalgo), Guanajuato."
+                explanation: "Este documento, presentado por Morelos en 1813, sentó las bases ideológicas del movimiento independentista, destacando la soberanía del pueblo y la abolición de la esclavitud (página 133)."
             },
             {
-                question: "¿Qué evento externo influyó directamente en el inicio del movimiento de independencia en 1810?",
-                options: ["La Revolución Industrial", "La invasión napoleónica a España en 1808", "La independencia de Estados Unidos", "La abolición de la esclavitud en Europa"],
-                correct: 1,
-                explanation: "La invasión napoleónica debilitó a la monarquía española, lo que permitió a las colonias como la Nueva España cuestionar su lealtad al gobierno peninsular y organizar movimientos independentistas."
+                question: "¿Con qué movimiento simpatizaba don José de Iturrigaray?",
+
+                options: ["Con el movimiento que pretendía la separación momentánea de la Nueva España", " Con revocar el mandato de Hidalgo.", "Apoyar los éxitos de Morelos", "Con la independencia absoluta."],
+                correct: 0,
+                explanation: "Iturrigaray simpatizaba con las propuestas de autonomía para la Nueva España, interpretadas como una separación temporal mientras se restablecía la monarquía legítima en España.."
             },
             {
-                question: "¿Qué tipo de causa se clasifica como interna en el contexto de la independencia de México?",
-                options: ["La influencia de la Ilustración", "El distanciamiento social entre criollos y peninsulares", "La independencia de las Trece Colonias de América", "La Revolución Francesa"],
-                correct: 1,
-                explanation: " Las causas internas se originan dentro de la propia colonia. En este caso, las tensiones sociales entre criollos y peninsulares fomentaron el descontento local y las ideas de independencia."
-            },
-            {
-                question: "¿Cuál fue una de las restricciones políticas que impulsaron el movimiento de independencia?",
-                options: ["La abolición de los monopolios comerciales", "La centralización y rigidez burocrática", "La falta de representación americana en el gobierno español", "La reducción de los privilegios criollos"],
-                correct: 2,
-                explanation: " La Nueva España no tenía representación adecuada en el gobierno español, lo que generaba un sentimiento de exclusión política entre los criollos y otras élites locales, alimentando el deseo de autonomía."
+                question: "¿Qué postulan Los Sentimientos de la Nación?",
+                options: ["La independencia, la democracia y la justicia social en el territorio mexicano", "La religión católica no es la única de la nación", "La soberanía pertenece a sus gobernantes.", " La sumisión total a España"],
+                correct: 0,
+                explanation: "Los Sentimientos de la Nación, redactados por Morelos, establecen principios clave como la independencia de México, el respeto a la justicia social y la búsqueda de un gobierno democrático."
             },
             
             {
-                question: "¿Cómo se dividen las causas de la Independencia de México según su ámbito, origen e impacto?",
-                options: ["Según su impacto, se dividen en económicas y políticas", "Según su ámbito, se dividen en internas y externas.","Según su origen, se dividen en directas e indirectas.","Según su ámbito, se dividen en económicas, políticas, sociales y culturales." ],
+                question: "¿Qué representó el Congreso de Chilpancingo para el movimiento insurgente?",
+                options: ["Un punto de ruptura con España.", "La rendición de los insurgentes.","La consolidación del poder realista.","El primer intento de un gobierno formal." ],
                 correct: 3,
-                explanation: "La clasificación permite analizar cómo cada aspecto de la sociedad, desde la economía hasta la cultura, influyó en el descontento general. Aunque las causas actuaron de forma concatenada, dividirlas facilita un análisis más detallado."
+                explanation: " El Congreso de Chilpancingo, convocado por Morelos en 1813, fue un hito en el movimiento, ya que buscaba establecer un orden político y administrativo propio, independiente del dominio español (página 134)."
             },{
-                question: "¿Qué relación tienen las Reformas Borbónicas y las ideas de la Ilustración con el descontento social en la Nueva España?",
-                options: ["Ambas limitaron el comercio interno, lo que perjudicó a los criollos.", "Las Reformas Borbónicas incrementaron impuestos, mientras que las ideas de la Ilustración alentaron principios de libertad e igualdad.", "Las ideas de la Ilustración justificaron la fidelidad al rey Fernando VII.", "Las Reformas Borbónicas impulsaron medidas liberales favorables para los criollos"],
-                correct: 1,
-                explanation: " Este aumento de impuestos, decidido por la corona española, afectó directamente la economía de los habitantes de la Nueva España, especialmente los criollos. Fue una causa económica interna que generó descontento entre los grupos sociales."
+                question: "Morelos logra tomar Oaxaca, con lo que controla",
+                options: ["La región del Istmo de Tehuantepec.", "Zitácuaro", "Ciudad de México", "Puebla"],
+                correct: 2,
+                explanation: "La toma de Oaxaca en 1812 permitió a Morelos controlar la estratégica región del Istmo de Tehuantepec, asegurando rutas comerciales y militares clave para los insurgentes."
             },
             {
-                question: "¿Por qué la invasión napoleónica a España en 1808 se considera un evento clave para el inicio del movimiento independentista en América?",
-                options: ["Porque demostró la incapacidad de España para mantener el control en sus colonias. ", "Porque fomentó un gobierno estable bajo José Bonaparte.", "Porque consolidó la autoridad de Fernando VII en América.", "Porque fortaleció los vínculos entre criollos y peninsulares."],
+                question: "¿Cuál fue la perdida de la derrota insurgente en Valladolid en 1814?",
+                options: ["La disolución del Congreso de Chilpancingo. ", "La pérdida de influencia de Morelos.", "La caída de todas las plazas insurgentes", "La captura de líderes insurgentes clave."],
                 correct: 0,
-                explanation: " Las causas internas se originan dentro de la propia colonia. En este caso, las tensiones sociales entre criollos y peninsulares fomentaron el descontento local y las ideas de independencia."
+                explanation: "La toma de Oaxaca en 1812 permitió a Morelos controlar la estratégica región del Istmo de Tehuantepec, asegurando rutas comerciales y militares clave para los insurgentes."
             },{
-                question: "¿Qué efectos tuvo el Bloqueo Continental decretado por Napoleón en la relación entre Francia, España y Portugal?",
+                question: "¿Cuál era la importancia de apoderarse de Acapulco?",
 
-                options: ["Aumentó el prestigio de Carlos IV como gobernante español.", "Facilitó el comercio entre Inglaterra y España.", "Forzó la invasión de Portugal y provocó la ocupación francesa en España. ","Promovió una alianza militar entre Francia y Portugal." ],
+                options: [" Por el comercio que recibían de Filipinas.", "Por las plazas más importantes del norte.", "Por las provincias que existían.","Por las rutas hacia Centroamérica" ],
+                correct: 1,
+                explanation: "Acapulco era importante por su conexión con el comercio transpacífico, especialmente con Filipinas, que representaba una fuente significativa de recursos y control estratégico."
+            },{
+                question: "¿Qué simbolizaba el uso de la bandera de Guadalupe en el ejército insurgente",
+
+                options: ["La imposición de la religión católica.", "La unión entre criollos y peninsulares.", "La lucha por la independencia bajo un símbolo religioso","La sumisión al poder eclesiástico." ],
                 correct: 2,
-                explanation: " Las ideas de libertad, igualdad y soberanía popular provenientes de la Ilustración influenciaron a los criollos, quienes las usaron como base ideológica para cuestionar la opresión colonial y demandar independencia."
+                explanation: " La Virgen de Guadalupe representaba un símbolo unificador y motivacional, especialmente para las masas, lo que ayudó a consolidar el apoyo popular a la causa insurgente (página 131) "
             },{
-                question: "¿Qué impacto tuvo la ocupación francesa de España y la destitución de Fernando VII en las colonias americanas?",
+                question: "¿En qué año surge la quinta campaña del ocaso militar?",
 
-                options: ["Generó estabilidad política en los territorios americanos.", "Motivó el inicio de los movimientos de independencia en América.", "Consolidó el poder de José Bonaparte como rey legítimo en América.","Frenó el avance de las ideas independentistas en las colonias." ],
-                correct: 1,
-                explanation: " La caída de Fernando VII y la crisis política en España hicieron que los criollos vieran la oportunidad de buscar un cambio en la relación colonial, considerando alternativas como la autonomía o la independencia total. "
+                options: ["1813-1815.", "1812-1813 ", " 1813-1814","1811-1812" ],
+                correct: 0,
+                explanation: " La quinta campaña insurgente (1813-1815) marcó el declive militar de Morelos, enfrentándose a mayores dificultades frente a las fuerzas realistas."
             },{
-                question: "¿Por qué no existió un proyecto unificado durante el proceso de Independencia?",
+                question: "¿Dónde se da la campaña más importante de Morelos?",
 
-                options: ["Porque las autoridades virreinales prohibieron reuniones para planificar el movimiento.", "Porque los intereses de los diferentes grupos eran diversos y la coyuntura en España se desarrolló rápidamente. ", "Porque no había líderes suficientes para guiar la lucha. ","Porque los criollos nunca lograron formar una alianza con los peninsulares." ],
+                options: ["En taxco", "En Cuautla.", "En puebla.","En Oaxaca." ],
                 correct: 1,
-                explanation: "  Los criollos, peninsulares, indígenas y mestizos tenían intereses distintos. Esta disparidad, junto con los rápidos cambios en la metrópoli, dificultó la creación de un plan cohesionado desde el inicio del movimiento."
-            },{
-                question: "¿Cuál fue el resultado de la revuelta organizada por la Audiencia en 1808?",
-
-                options: ["Se consolidó un gobierno autónomo liderado por criollos.", "José de Iturrigaray fue sustituido como virrey, y el proyecto autonomista fue sofocado.", "La conspiración de Valladolid se inició inmediatamente después.","Se formó un ejército de criollos para enfrentar a los peninsulares." ],
-                correct: 1,
-                explanation: " La Audiencia, dominada por peninsulares, temía perder poder frente a los criollos. Por ello, actuaron contra Iturrigaray, quien simpatizaba con un proyecto autonomista, logrando su destitución y restableciendo el control peninsular."
+                explanation: " La resistencia insurgente de Cuautla es considerada la campaña más importante de Morelos, pues demostró su habilidad estratégica y fortaleció la causa independentista."
                 
             },{
-                question: "¿Qué decisión de Hidalgo tras la victoria en el Monte de las Cruces provocó el descontento entre los jefes insurgentes?",
+                question: "¿Qué resultado tuvo la participación de Morelos en la Tercera Campaña?",
 
-                options: ["Abolir la esclavitud en toda la Nueva España.", "Regresar a Querétaro en lugar de tomar la Ciudad de México.", "Reemplazar a Allende como comandante del ejército. ","Atacar Toluca sin preparación suficiente." ],
+                options: ["La toma de Guadalajara.", "La conquista de Oaxaca", "La captura de Valladolid. ","El inicio del sitio de Cuautla" ],
                 correct: 1,
-                explanation: "  Hidalgo sabía que su ejército, formado en su mayoría por campesinos y soldados improvisados, podría cometer saqueos y desmanes en la capital, como ya había ocurrido en otras ciudades. Este temor lo llevó a retroceder, aunque generó descontento entre los líderes insurgentes."
+                explanation: "La Tercera Campaña de Morelos en 1812 resultó en la toma de Oaxaca, una ciudad clave para fortalecer la resistencia insurgente en el sur del país (página 133)."
             },{
-                question: "¿Qué acción destacó a José María Morelos como líder principal del movimiento tras la muerte de Hidalgo?",
+                question: "¿Qué resultado tuvo la participación de Morelos en la Tercera Campaña?",
 
-                options: ["Formar un gobierno insurgente en Guadalajara.", "Organizar campañas militares efectivas y reclamar el puerto de Acapulco.", "Declarar la independencia absoluta de la Nueva España. ","Viajar a Estados Unidos para adquirir armas y recursos." ],
+                options: ["La toma de Guadalajara.", "La conquista de Oaxaca.", "La captura de Valladolid ","El inicio del sitio de Cuautla." ],
                 correct: 1,
-                explanation: "Morelos llevó a cabo una exitosa campaña militar en el sur, logrando el control de territorios estratégicos como Acapulco. Además, impulsó un proyecto político que organizó mejor el movimiento insurgente, lo que lo convirtió en el principal líder tras la muerte de Hidalgo."
+                explanation: " La Tercera Campaña de Morelos en 1812 resultó en la toma de Oaxaca, una ciudad clave para fortalecer la resistencia insurgente en el sur del país (página 133)."
             },{
-                question: " ¿Cuál fue la principal causa cultural que favoreció el proceso de independencia de México en 1810?",
+                question: "¿Dónde fue fusilado Morelos?",
 
-                options: ["La llegada de la Revolución Industrial.", "El sentimiento de identidad nacional en la Nueva España.", "La invasión de Napoleón a México.","a prohibición del comercio con otras naciones." ],
+                options: ["En cuatla.", "En Acapulco.", " En Oaxaca","En ecatepec" ],
                 correct: 1,
-                explanation: "Durante el periodo colonial, surgió un creciente sentido de identidad entre los criollos (descendientes de europeos nacidos en América), quienes se sentían relegados por las políticas discriminatorias de la metrópoli."
+                explanation: "Morelos fue fusilado en Ecatepec el 22 de diciembre de 1815, tras ser capturado por las fuerzas realistas."
             },{
-                question: " ¿Qué papel jugaron las ideas liberales europeas en el proceso de independencia de México?",
+                question: "Nombre del pacto de Agustin de Iturbide Y Guerrero",
 
-                options: ["rearon un sentido de obediencia hacia la corona española.", "Fueron rechazadas por la mayoría de los criollos.", "Inspiraron a los criollos a luchar por sus derechos y autonomía.","Provocaron un aumento en los impuestos." ],
-                correct: 2,
-                explanation: "Las ideas de libertad, igualdad y soberanía popular provenientes de movimientos como la Ilustración y la Revolución Francesa influyeron profundamente en los criollos y otros grupos en la Nueva España. Estas corrientes ideológicas impulsaron a los líderes independentistas a cuestionar la legitimidad de la monarquía española y a demandar derechos y autonomía."
+                options: ["Abrazo de acatempan", "Tratado de cordoba", "Plan de Iguala","Tratado de Versalles" ],
+                correct: 0,
+                explanation: "El abrazo de acatempan dio un pacto de tregue entre guerrero y Agustin de itubirde dando paso a la consumación"
             },{
-                question: " ¿Cuál fue la principal causa cultural que favoreció el proceso de independencia de México en 1810?",
+                question: " ¿Cuál fue el principal representante del proyecto independentista renovador?",
 
-                options: ["La llegada de la Revolución Industrial.", "El sentimiento de identidad nacional en la Nueva España.", "La invasión de Napoleón a México.","a prohibición del comercio con otras naciones." ],
-                correct: 1,
-                explanation: "Durante el periodo colonial, surgió un creciente sentido de identidad entre los criollos (descendientes de europeos nacidos en América), quienes se sentían relegados por las políticas discriminatorias de la metrópoli."
+                options: ["Miguel Hidalgo y Costilla.", "José María Morelos y Pavón.", " Agustín de Iturbide","Ignacio Allende." ],
+                correct: 2 ,
+                explanation: "El proyecto renovador se caracterizó por ser liderado por Agustín de Iturbide, quien planteaba crear una nación desvinculada de España con posibilidad de un monarca europeo. (Página 135)."
             },,{
-                question: " ¿Qué evento internacional contribuyó a generar un cambio en la relación entre la metrópoli española y sus colonias americanas?",
+                question: " ¿En qué año comenzó el movimiento armado de la Independencia de México?",
 
-                options: ["La guerra de independencia de Estados Unidos.", "La Revolución Industrial.", " La invasión napoleónica a España en 1808.","La llegada de Cristóbal Colón a América." ],
-                correct: 2,
-                explanation: "Cuando Napoleón Bonaparte invadió España y colocó a su hermano José Bonaparte como rey, se produjo un vacío de poder en la península ibérica. Esto debilitó la autoridad española y dio lugar a movimientos en América que aprovecharon esta crisis para cuestionar su dependencia de la metrópoli."
+                options: ["1808", "1810.", "1815","1820" ],
+                correct: 1,
+                explanation: "El movimiento armado comenzó en 1810 con el levantamiento de Miguel Hidalgo, marcando la etapa de iniciación. (Página 129)"
             },{
-                question: " ¿Cuál fue el impacto de la caída de los monarcas españoles en los territorios españoles en América?",
+                question: " ¿¿Cuál fue el principal objetivo del Plan de Iguala?",
 
-                options: [" Los territorios americanos apoyaron incondicionalmente a José Bonaparte.", " Se produjo un sentimiento de lealtad hacia la corona francesa.", "Se generó un sentimiento de rebelión y cuestionamiento de la autoridad española.","Hubo un fortalecimiento del control español en las colonias." ],
-                correct: 2,
-                explanation: "La abdicación de los reyes españoles y el ascenso de un gobernante extranjero provocaron un sentimiento de incertidumbre en las colonias americanas. Ante esta situación, los criollos comenzaron a organizarse y a rebelarse, argumentando que, sin un monarca legítimo, podían autogobernarse."
-            },{
-                question: " ¿Cuál fue el impacto de la caída de los monarcas españoles en los territorios españoles en América?",
-
-                options: [" Porque todos estaban de acuerdo en seguir a Fernando VII.", " Porque había una única estrategia clara y acordada por todos.", "Porque los intereses eran diversos y no había un eje unificado.","Porque se esperaba que la independencia fuera liderada por la corona española." ],
-                correct: 2,
-                explanation: "Los movimientos de independencia no fueron homogéneos porque en la Nueva España coexistían intereses diversos entre criollos, indígenas, mestizos y otras clases sociales. No había una agenda única ni consenso sobre cómo debía estructurarse el proceso de independencia, lo que resultó en estrategias dispersas y conflictos internos."
-            },
-
-
-
-
+                options: ["Declarar la independencia de Nueva España. ", " Proponer una reforma agraria en favor de los indígenas.", "Establecer una república democrática","Crear un protectorado bajo la corona francesa." ],
+                correct: 0,
+                
+                explanation: "El Plan de Iguala buscaba establecer la independencia de Nueva España bajo un sistema monárquico constitucional. (Página 137)"}
 
 
             // Agrega más preguntas aquí
         ];
-
         let currentQuestions = [];
-        let currentQuestion = 0;
-        let lives = 4;
+        let currentQuestionIndex = 0;
         let score = 0;
-        let consecutiveCorrect = 0;
-        let timeLeft = 300; // 5 minutos en segundos
-        let questionTimer = 15;
+        let timeLeft = 180; // 3 minutes
         let gameTimer;
-        let questionInterval;
-        let wrongAnswers = [];
-
+        let userAnswers = []; // To track user's answers
+        let reviewMode = false;
+        
         function shuffleQuestions() {
-            currentQuestions = [...questions].sort(() => Math.random() - 0.5);
+            currentQuestions = [...questions].sort(() => Math.random() - 0.5).slice(0, 20); // Seleccionar solo 10 preguntas
+            // Initialize user answers array
+            userAnswers = new Array(currentQuestions.length).fill(null);
         }
-
+        
         function startGame() {
             const playerName = document.getElementById('player-name').value;
             if (!playerName) {
                 alert('Por favor ingresa tu nombre');
                 return;
             }
-
+        
             document.getElementById('welcome-screen').style.display = 'none';
             document.getElementById('game-screen').style.display = 'block';
+            
+            // Modify game screen to include navigation and progress tracking
+            const navigationButtons = `
+                <div id="question-navigation">
+                    <div id="progress-tracker">Pregunta <span id="current-question">1</span> de ${currentQuestions.length}</div>
+                    <button id="prev-question" style="display:none;">Anterior</button>
+                    <button id="next-question">Siguiente</button>
+                    <button id="finish-game" style="display:none;">Finalizar</button>
+                </div>
+            `;
+            document.querySelector('.question-container').innerHTML += navigationButtons;
+        
+            document.getElementById('prev-question').addEventListener('click', showPreviousQuestion);
+            document.getElementById('next-question').addEventListener('click', showNextQuestion);
+            document.getElementById('finish-game').addEventListener('click', endGame);
             
             shuffleQuestions();
             startTimers();
             showQuestion();
         }
-
+        
         function startTimers() {
             gameTimer = setInterval(() => {
                 timeLeft--;
                 updateTimer();
-                if (timeLeft <= 60) {
+                if (timeLeft <= 30) {
                     document.getElementById('timer').classList.add('warning');
                 }
                 if (timeLeft <= 0) {
                     endGame();
                 }
             }, 1000);
-
-            startQuestionTimer();
         }
-
-        function startQuestionTimer() {
-            questionTimer = 15;
-            updateQuestionTimer();
-            if (questionInterval) clearInterval(questionInterval);
-            questionInterval = setInterval(() => {
-                questionTimer--;
-                updateQuestionTimer();
-                if (questionTimer <= 0) {
-                    handleAnswer(-1);
-                }
-            }, 1000);
-        }
-
-        function updateQuestionTimer() {
-            const timerElement = document.getElementById('question-time');
-            timerElement.textContent = questionTimer;
-            if (questionTimer <= 5) {
-                timerElement.classList.add('warning');
-            } else {
-                timerElement.classList.remove('warning');
-            }
-        }
-
+        
         function updateTimer() {
             const minutes = Math.floor(timeLeft / 60);
             const seconds = timeLeft % 60;
             document.getElementById('timer').textContent = 
                 `${minutes}:${seconds.toString().padStart(2, '0')}`;
         }
-
+        
         function showQuestion() {
-            if (currentQuestion >= currentQuestions.length) {
+            if (currentQuestionIndex >= currentQuestions.length) {
                 endGame();
                 return;
             }
-
-            const question = currentQuestions[currentQuestion];
+        
+            const question = currentQuestions[currentQuestionIndex];
             document.getElementById('question').textContent = question.question;
+            
+            // Update progress tracker
+            document.getElementById('current-question').textContent = currentQuestionIndex + 1;
             
             const optionsContainer = document.getElementById('options');
             optionsContainer.innerHTML = '';
@@ -227,43 +209,152 @@
             question.options.forEach((option, index) => {
                 const button = document.createElement('button');
                 button.textContent = option;
-                button.onclick = () => handleAnswer(index);
+                button.onclick = () => selectAnswer(index);
+                
+                // Restore previous selection if exists
+                if (userAnswers[currentQuestionIndex] !== null) {
+                    button.disabled = true;
+                    if (index === userAnswers[currentQuestionIndex]) {
+                        button.classList.add('selected');
+                    }
+                    if (index === question.correct) {
+                        button.classList.add('correct');
+                    }
+                }
+                
                 optionsContainer.appendChild(button);
             });
-
-            startQuestionTimer();
+        
+            // Update navigation buttons
+            updateNavigationButtons();
         }
-
-        function handleAnswer(selectedIndex) {
-            clearInterval(questionInterval);
-            const question = currentQuestions[currentQuestion];
+        
+        function selectAnswer(selectedIndex) {
+            const optionButtons = document.querySelectorAll('#options button');
             
-            if (selectedIndex === question.correct) {
-                score += 100;
-                consecutiveCorrect++;
-                if (consecutiveCorrect === 5) {
-                    lives++;
-                    consecutiveCorrect = 0;
-                    window.alert('¡Ganaste una vida extra! 🥳');
-                }
+            // Remove any previous selections
+            optionButtons.forEach((button, index) => {
+                button.classList.remove('selected', 'correct', 'incorrect');
+                button.disabled = false;
+            });
+        
+            // Highlight selected answer
+            optionButtons[selectedIndex].classList.add('selected');
+            
+            // Store user's answer
+            userAnswers[currentQuestionIndex] = selectedIndex;
+            
+            // Disable all buttons after selection
+            optionButtons.forEach(button => button.disabled = true);
+        
+            // Update navigation buttons
+            updateNavigationButtons();
+        }
+        
+        function updateNavigationButtons() {
+            const prevButton = document.getElementById('prev-question');
+            const nextButton = document.getElementById('next-question');
+            const finishButton = document.getElementById('finish-game');
+            
+            // Previous button
+            prevButton.style.display = currentQuestionIndex > 0 ? 'inline-block' : 'none';
+            
+            // Next/Finish button
+            if (currentQuestionIndex === currentQuestions.length - 1) {
+                nextButton.style.display = 'none';
+                finishButton.style.display = 'inline-block';
             } else {
-                lives -= 0.5;
-                consecutiveCorrect = 0;
-                window.alert('¡Perdiste media vida 🥺')
-                wrongAnswers.push({
-                    question: question.question,
-                    correctAnswer: question.options[question.correct],
-                    explanation: question.explanation
-                });
+                nextButton.style.display = 'inline-block';
+                finishButton.style.display = 'none';
             }
-
-            document.getElementById('lives').textContent = lives;
-            document.getElementById('score').textContent = score;
-
-            if (lives <= 0) {
-                endGame();
-                return window.alert ("Perdiste, vuelve a intentarlo 🥺 ")
+        }
+        
+        function showPreviousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showQuestion();
             }
+        }
+        
+        function showNextQuestion() {
+            if (currentQuestionIndex < currentQuestions.length - 1) {
+                currentQuestionIndex++;
+                showQuestion();
+            }
+        }
+        
+        function endGame() {
+            // Clear the game timer
+            clearInterval(gameTimer);
+        
+            // Calculate score
+            score = userAnswers.reduce((total, answer, index) => {
+                return answer === currentQuestions[index].correct ? total + 100 : total;
+            }, 0);
+        
+            // Hide game screen, show results screen
+            document.getElementById('game-screen').style.display = 'none';
+            document.getElementById('results-screen').style.display = 'block';
+        
+            // Calculate time spent
+            const timeSpent = 180 - timeLeft;
+            const minutes = Math.floor(timeSpent / 60);
+            const seconds = timeSpent % 60;
+        
+            // Count correct answers
+            const correctAnswersCount = userAnswers.filter((answer, index) => 
+                answer === currentQuestions[index].correct
+            ).length;
+        
+            // Display final stats
+            document.getElementById('final-stats').innerHTML = `
+                <h3>Estadísticas finales:</h3>
+                <p>Puntuación final: ${score}</p>
+                <p>Tiempo usado: ${minutes}:${seconds.toString().padStart(2, '0')}</p>
+                <p>Preguntas correctas: ${correctAnswersCount} de ${currentQuestions.length}</p>
+            `;
+        
+            // Display all questions with answers and explanations
+            const wrongAnswersContainer = document.getElementById('wrong-answers');
+            wrongAnswersContainer.innerHTML = '<h3>Todas las Preguntas:</h3>';
+            
+            currentQuestions.forEach((question, index) => {
+                const userAnswer = userAnswers[index];
+                const isCorrect = userAnswer === question.correct;
+                
+                wrongAnswersContainer.innerHTML += `
+                    <div class="wrong-answer ${isCorrect ? 'correct' : 'incorrect'}">
+                        <p><strong>Pregunta:</strong> ${question.question}</p>
+                        <p><strong>Tu respuesta:</strong> ${userAnswer !== null ? question.options[userAnswer] : 'No respondida'}</p>
+                        <p><strong>Respuesta correcta:</strong> ${question.options[question.correct]}</p>
+                        <p><strong>Explicación:</strong> ${question.explanation}</p>
+                    </div>
+                `;
+            });
+        }
+        
+        function restartGame() {
+            // Reset all game variables
+            score = 0;
+            currentQuestionIndex = 0;
+            timeLeft = 180;
+            userAnswers = [];
+        
+            // Hide results screen, show welcome screen
+            document.getElementById('results-screen').style.display = 'none';
+            document.getElementById('welcome-screen').style.display = 'block';
+            
+            // Remove warning from timer
+            document.getElementById('timer').classList.remove('warning');
+            
+            // Reset player name input
+            document.getElementById('player-name').value = '';
+        }
+        
+        // Ensure these functions are globally accessible
+        window.startGame = startGame;
+        window.restartGame = restartGame;
+        window.endGame = endGame;
 
             currentQuestion++;
             showQuestion();
