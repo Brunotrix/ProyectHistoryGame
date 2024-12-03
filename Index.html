@@ -3,329 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>La Independencia de México - Juego Educativo</title>
-<style>
-:root {
-    --green: #006847;
-    --white: #FFFFFF;
-    --red: #CE1126;
-    --gold: #FFD700;
-    --navy: #000080;
-}
+    <title>Instrucciones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://press.com.mx/wp-content/uploads/2021/12/IPN.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
 
-html, body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, var(--green) 0%, var(--white) 50%, var(--red) 100%);
-    min-height: 100vh;
-    background-attachment: fixed;
-    font-size: 16px;
-}
+        .container {
+            background-color: rgba(86, 85, 85, 0.9);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 2rem;
+            text-align: center;
+        }
 
-.container {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 15px;
-}
+        h1 {
+            background: white;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
 
-#welcome-screen, #game-screen, #results-screen {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    padding: 30px;
-    width: 100%;
-    text-align: center;
-    animation: fadeIn 0.5s ease-out;
-    margin: 20px auto;
-}
+        .instructions {
+            background: white;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-}
+        .step {
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+        }
 
-h1, h2, h3 {
-    color: var(--navy);
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
+        .gradient-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #004e5a, #065d57);
+            border-radius: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
 
-#player-name {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 2px solid var(--green);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
+        .gradient-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
 
-#player-name:focus {
-    outline: none;
-    border-color: var(--red);
-    box-shadow: 0 0 10px rgba(206, 17, 38, 0.3);
-}
-
-button {
-    background-color: var(--green);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    margin: 10px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    font-size: 0.9rem;
-}
-
-button:hover {
-    background-color: var(--red);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
-}
-
-button:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-#options {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-#options button {
-    background-color: var(--white);
-    color: var(--navy);
-    border: 2px solid var(--green);
-    transition: all 0.3s ease;
-    white-space: normal;
-    word-wrap: break-word;
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-#options button:hover {
-    background-color: var(--green);
-    color: white;
-}
-
-#options button.selected {
-    background-color: var(--red);
-    color: white;
-}
-
-#timer {
-    font-size: 1.5em;
-    color: var(--navy);
-    font-weight: bold;
-    padding: 10px;
-    background-color: rgba(255,255,255,0.7);
-    border-radius: 10px;
-    display: inline-block;
-}
-
-#timer.warning {
-    color: var(--red);
-    animation: pulse 1s infinite alternate;
-}
-
-@keyframes pulse {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
-}
-
-#question-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    gap: 10px;
-}
-
-#progress-tracker {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.wrong-answer {
-    background-color: rgba(255,255,255,0.8);
-    border-left: 5px solid var(--green);
-    margin: 15px 0;
-    padding: 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    text-align: left;
-}
-
-.wrong-answer.correct {
-    border-left-color: var(--green);
-    background-color: rgba(0,255,0,0.1);
-}
-
-.wrong-answer.incorrect {
-    border-left-color: var(--red);
-    background-color: rgba(255,0,0,0.1);
-}
-
-.creators, .group {
-    margin-top: 30px;
-    background-color: rgba(255,255,255,0.7);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-    html, body {
-        font-size: 14px;
-    }
-
-    #options {
-        grid-template-columns: 1fr;
-    }
-
-    #question-navigation {
-        flex-direction: column;
-    }
-
-    button {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    #options button {
-        min-height: 50px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    html, body {
-        font-size: 12px;
-    }
-
-    #welcome-screen, #game-screen, #results-screen {
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-}
-
-/* Accessibility and Print Styles */
-@media print {
-    body {
-        background: white;
-    }
-
-    #welcome-screen, #game-screen, #results-screen {
-        box-shadow: none;
-        border: 1px solid #ccc;
-    }
-}
-
-/* Ensure high contrast for readability */
-@media (prefers-contrast: high) {
-    button {
-        border: 2px solid black;
-    }
-
-    #options button {
-        border: 2px solid black;
-    }
-}
+        .gradient-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
-    <div id="welcome-screen">
-        <h1>La Independencia de México</h1>
-        <input type="text" id="player-name" placeholder="Ingresa tu nombre">
-        <button onclick="startGame()">Empezar</button>
-    </div>
-
-    <div id="game-screen" style="display:none;">
-        <div class="stats">
-            Vidas: <span id="lives">4</span> 
-            Tiempo: <span id="timer">5:00</span>
-        </div>
-
-        <div class="question-container">
-            <h2 id="question"></h2>
-
-            <div class="question-timer">
-                Recomendación de tiempo de pregunta: <span id="question-time">15</span>s
+    <div class="container">
+        <h1>Instrucciones y reglamento </h1>
+        <div class="instructions">
+            <div class="step">
+                1. Tienes 5 min para contestar el questionario , si logras tener 13 aciertos aprobaste
             </div>
-
-            <div id="options" class="options">
-                <!-- Options will be dynamically populated -->
+            <div class="step">
+                2. Lee cuidadosamente las preguntas y contesta seleccionando la opción que a ti te parezca, peudes restrocder si asi te parece
             </div>
-
-            <div class="question-navigation">
-                <div id="progress-tracker">
-                    Pregunta <span id="current-question">1</span> de 20
-                </div>
-
-                <button id="prev-question">Anterior</button>
-                <button id="next-question">Siguiente</button>
-                <button id="finish-game">Finalizar</button>
+            <div class="step">
+                3. La navegación en preguntas es completamente abierta
+            </div>
+            <div class="step">
+                4. Al finalizar se te revelara tus respuestas , te marcara los aciertos y errores con su ecpliación y número de página
+            </div>
+            <div class="step">
+                5. Dsifruta y pon aprueba tus conocimientos .
             </div>
         </div>
+        <a href="./Juego/juego.html" class="gradient-button">!Estoy listo¡</a>
     </div>
-
-    <div id="results-screen" style="display:none;">
-        <h2>¡Juego Terminado!</h2>
-
-        <div id="final-stats">
-            <!-- Final stats will be dynamically populated -->
-        </div>
-
-        <div id="wrong-answers">
-            <!-- Detailed question results will be dynamically populated -->
-        </div>
-
-        <button onclick="restartGame()">Jugar de nuevo</button>
-    </div>
-
-    <div class="creators">
-        <h3>Creadores:</h3>
-        <p>
-            Salinas Miranda Bruno Azael<br>
-            Hernández Cortes Luis David<br>
-            Lopez Hernández Alexander Gabriel<br>
-            Rodriguez Herrera Ángel Zuriel
-        </p>
-    </div>
-
-    <div class="group">
-        <h3>Grupo:</h3>
-        <p>
-            1IM16 1°semestre, 2025<br>
-            Historia contemporánea de México<br>
-            Hecho por Alumnos del Instituto Politécnico Nacional
-        </p>
-    </div>
-
-    <script src="juego.js"></script>
 </body>
 </html>
