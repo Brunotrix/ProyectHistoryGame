@@ -6,173 +6,267 @@
     <link rel="stylesheet" href="/style.css">
     <title>La Independencia de México - Juego Educativo</title>
 <style>
-               :root {
-            --primary-color: #0D47A1;
-            --secondary-color: #1976D2;
-            --background-color: #F0F4F8;
-            --text-color: #333;
-        }
+:root {
+    --green: #006847;
+    --white: #FFFFFF;
+    --red: #CE1126;
+    --gold: #FFD700;
+    --navy: #000080;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
+html, body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--green) 0%, var(--white) 50%, var(--red) 100%);
+    min-height: 100vh;
+    background-attachment: fixed;
+    font-size: 16px;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+}
 
-        #welcome-screen, #game-screen, #results-screen {
-            text-align: center;
-            padding: 30px;
-        }
+#welcome-screen, #game-screen, #results-screen {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+    margin: 20px auto;
+}
 
-        h1, h2, h3 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
 
-        #player-name {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 2px solid var(--secondary-color);
-            border-radius: 5px;
-            font-size: 16px;
-        }
+h1, h2, h3 {
+    color: var(--navy);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
 
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin: 10px;
-            transition: background-color 0.3s ease;
-        }
+#player-name {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid var(--green);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
 
-        .btn:hover {
-            background-color: var(--secondary-color);
-        }
+#player-name:focus {
+    outline: none;
+    border-color: var(--red);
+    box-shadow: 0 0 10px rgba(206, 17, 38, 0.3);
+}
 
-        .stats {
-            display: flex;
-            justify-content: space-between;
-            background-color: #F1F8E9;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
+button {
+    background-color: var(--green);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+}
 
-        .stats > * {
-            flex: 1;
-            text-align: center;
-            font-weight: bold;
-        }
+button:hover {
+    background-color: var(--red);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
 
-        .options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 20px;
-        }
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-        .options button {
-            padding: 12px;
-            border: 2px solid var(--secondary-color);
-            background-color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+#options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
 
-        .options button:hover {
-            background-color: var(--secondary-color);
-            color: white;
-        }
+#options button {
+    background-color: var(--white);
+    color: var(--navy);
+    border: 2px solid var(--green);
+    transition: all 0.3s ease;
+    white-space: normal;
+    word-wrap: break-word;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-        .options button.selected {
-            background-color: var(--secondary-color);
-            color: white;
-        }
+#options button:hover {
+    background-color: var(--green);
+    color: white;
+}
 
-        .options button.correct {
-            background-color: #4CAF50;
-            color: white;
-        }
+#options button.selected {
+    background-color: var(--red);
+    color: white;
+}
 
-        .options button.incorrect {
-            background-color: #F44336;
-            color: white;
-        }
+#timer {
+    font-size: 1.5em;
+    color: var(--navy);
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    display: inline-block;
+}
 
-        #question-navigation {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 20px;
-        }
+#timer.warning {
+    color: var(--red);
+    animation: pulse 1s infinite alternate;
+}
 
-        #progress-tracker {
-            font-weight: bold;
-        }
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
 
-        #wrong-answers .wrong-answer {
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 5px;
-        }
+#question-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
 
-        #wrong-answers .wrong-answer.correct {
-            background-color: #E8F5E9;
-        }
+#progress-tracker {
+    flex-grow: 1;
+    text-align: center;
+}
 
-        #wrong-answers .wrong-answer.incorrect {
-            background-color: #FFEBEE;
-        }
+.wrong-answer {
+    background-color: rgba(255,255,255,0.8);
+    border-left: 5px solid var(--green);
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-align: left;
+}
 
-        .timer.warning {
-            color: red;
-            font-weight: bold;
-        }
+.wrong-answer.correct {
+    border-left-color: var(--green);
+    background-color: rgba(0,255,0,0.1);
+}
 
-        .creators, .group {
-            margin-top: 30px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #666;
-        }
+.wrong-answer.incorrect {
+    border-left-color: var(--red);
+    background-color: rgba(255,0,0,0.1);
+}
+
+.creators, .group {
+    margin-top: 30px;
+    background-color: rgba(255,255,255,0.7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    html, body {
+        font-size: 14px;
+    }
+
+    #options {
+        grid-template-columns: 1fr;
+    }
+
+    #question-navigation {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #options button {
+        min-height: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html, body {
+        font-size: 12px;
+    }
+
+    #welcome-screen, #game-screen, #results-screen {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Accessibility and Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    #welcome-screen, #game-screen, #results-screen {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Ensure high contrast for readability */
+@media (prefers-contrast: high) {
+    button {
+        border: 2px solid black;
+    }
+
+    #options button {
+        border: 2px solid black;
+    }
+}
     </style>
 </head>
 <body>
-    <!-- Pantalla de Bienvenida -->
     <div id="welcome-screen">
         <h1>La Independencia de México</h1>
         <input type="text" id="player-name" placeholder="Ingresa tu nombre">
         <button onclick="startGame()">Empezar</button>
     </div>
 
-    <!-- Pantalla de Juego -->
     <div id="game-screen" style="display:none;">
         <div class="stats">
             Vidas: <span id="lives">4</span> 
-            Puntos: <span id="score">0</span> 
             Tiempo: <span id="timer">5:00</span>
         </div>
 
@@ -180,27 +274,34 @@
             <h2 id="question"></h2>
 
             <div class="question-timer">
-                Tiempo de pregunta: <span id="question-time">15</span>s
+                Recomendación de tiempo de pregunta: <span id="question-time">15</span>s
             </div>
 
             <div id="options" class="options">
-                <!-- Las opciones se generarán dinámicamente con JavaScript -->
+                <!-- Options will be dynamically populated -->
+            </div>
+
+            <div class="question-navigation">
+                <div id="progress-tracker">
+                    Pregunta <span id="current-question">1</span> de 20
+                </div>
+
+                <button id="prev-question">Anterior</button>
+                <button id="next-question">Siguiente</button>
+                <button id="finish-game">Finalizar</button>
             </div>
         </div>
-
-        <button onclick="endGame()" style="margin-top: 20px;">Finalizar</button>
     </div>
 
-    <!-- Pantalla de Resultados -->
     <div id="results-screen" style="display:none;">
         <h2>¡Juego Terminado!</h2>
 
         <div id="final-stats">
-            <!-- Estadísticas finales se generarán aquí -->
+            <!-- Final stats will be dynamically populated -->
         </div>
 
         <div id="wrong-answers">
-            <!-- Respuestas incorrectas se mostrarán aquí -->
+            <!-- Detailed question results will be dynamically populated -->
         </div>
 
         <button onclick="restartGame()">Jugar de nuevo</button>
@@ -208,17 +309,22 @@
 
     <div class="creators">
         <h3>Creadores:</h3>
-        <p>Salinas Miranda Bruno Azael</p>
-        <p>Hernández Cortes Luis David</p>
-        <p>Lopez Hernández Alexander Gabriel</p>
-        <p>Rodriguez Herrera Ángel Zuriel</p>
+        <p>
+            Salinas Miranda Bruno Azael<br>
+            Hernández Cortes Luis David<br>
+            Lopez Hernández Alexander Gabriel<br>
+            Rodriguez Herrera Ángel Zuriel
+        </p>
     </div>
 
     <div class="group">
         <h3>Grupo:</h3>
-        <p>1IM16 1°semestre, 2025</p>
-        <p>Historia contemporánea de México</p>
-        <p>Hecho por Alumnos del Instituto Politécnico Nacional</p>
+        <p>
+            1IM16 1°semestre, 2025<br>
+            Historia contemporánea de México<br>
+            Hecho por Alumnos del Instituto Politécnico Nacional
+            CECYT 10
+        </p>
     </div>
 
     <script src="juego.js"></script>
